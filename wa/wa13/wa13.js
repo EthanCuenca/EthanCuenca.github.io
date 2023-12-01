@@ -1,135 +1,143 @@
-// setup canvas
+// Problem 1
+// setting the array that we need to read from
+let eData = {
+    "Employees": [
+        {
+            "firstName": "Sam",
+            "department": "Tech",
+            "designation": "Manager",
+            "salary": "40000",
+            "raiseEligible": "true"
+        },
+        {
+            "firstName": "Mary",
+            "department": "Finance",
+            "designation": "Trainee",
+            "salary": "18500",
+            "raiseEligible": "true"
+        },
+        {
+            "firstName": "Bill",
+            "department": "HR",
+            "designation": "Executive",
+            "salary": "21200",
+            "raiseEligible": "false"
+        },
+    ]
+};
 
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+// printing everything
+console.log("Problem 1:\n");
+console.log("Employee 1:\n");
+console.log(eData.Employees[0]);
+console.log("Employee 2:\n");
+console.log(eData.Employees[1]);
+console.log("Employee 3:\n");
+console.log(eData.Employees[2]);
 
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
+console.log("*********************************************")
+// Problem 2 
+let cData = {
+    "Company" : [
+        {
+            "companyName" : "Tech Stars",
+            "website" : "www.techstars.site",
+            "employees" : eData
+        }
+    ]
+};
 
-// function to generate random number
+console.log("Problem 2:\n");
+console.log(cData.Company[0]);
+// seperation
+console.log("*********************************************")
+console.log("Another display for problem 2");
+console.log("Company name:" + cData.Company[0].companyName);
+console.log("Website:" + cData.Company[0].website);
+console.log("Employees:");
 
-function random(min, max) 
+for (let i=0; i < eData.Employees.length; i++)
 {
-  const num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+    console.log(eData.Employees[i].firstName);
 }
 
-// function to generate random color
+console.log("*********************************************")
+// Problem 3
+// add to our array of employees
+eData.Employees.push({ "firstName" : "Anna", "department" : "Tech", "designation" : "Executive", "salary" : "25600", "raiseEligible" : "false"});
 
-function randomRGB() 
+console.log("Problem 3:\n");
+console.log("New hire:\n");
+console.log(eData.Employees[3]);
+console.log("*********************************************")
+// Problem 4
+let totalSalary = 0;
+
+for(let i = 0; i < eData.Employees.length; i++)
 {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+    // this is to convert string to integer
+    totalSalary += parseInt(eData.Employees[i].salary);
 }
 
-// creating our class
-class Ball 
+console.log("Problem 4:\n");
+console.log("Total Salary of all listed employees: " + totalSalary);
+console.log("*********************************************")
+// Problem 5
+
+function Raise(employee)
 {
-
-    constructor(x, y, velX, velY, color, size) 
+    if (employee.raiseEligible == "true")
     {
-       this.x = x;
-       this.y = y;
-       this.velX = velX;
-       this.velY = velY;
-       this.color = color;
-       this.size = size;
+        // this will get the current salary
+        let employeeSalary = parseInt(employee.salary);
+        // calculate the raise amount
+        let raiseAmount = employeeSalary * 0.1;
+
+        employeeSalary += raiseAmount;
+        employee.employeeSalary = employeeSalary.toString();
+        employee.raiseEligible = 'false';
+
+        console.log(employee.firstName + " received a raise of " + raiseAmount.toFixed(2) + " thier new salary is " + employee.employeeSalary);
+
     }
 
-    // this is our draw function
-    draw() 
+    else
     {
-       ctx.beginPath();
-       ctx.fillStyle = this.color;
-       ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-       ctx.fill();
+        console.log(employee.firstName + " is not eligible for a raise at this time sorry");
+
     }
-
-    // updates the canvas
-    update() 
-    {
-
-        // lots of if statements
-        if ((this.x + this.size) >= width) 
-        {
-            this.velX = -(Math.abs(this.velX));
-        }
- 
-        if ((this.x - this.size) <= 0) 
-        {
-            this.velX = Math.abs(this.velX);
-        }
- 
-        if ((this.y + this.size) >= height) 
-        {
-          this.velY = -(Math.abs(this.velY));
-        }
- 
-        if ((this.y - this.size) <= 0) 
-        {
-          this.velY = Math.abs(this.velY);
-        }
- 
-        this.x += this.velX;
-        this.y += this.velY;
-    }
-
-    // dunction that will chnage the color of the ball if there is a collision on screen
-    collisionDetect() 
-    {
-
-        for (const ball of balls) 
-        {
-            if (!(this === ball)) 
-            {
-                const dx = this.x - ball.x;
-                const dy = this.y - ball.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
- 
-                if (distance < this.size + ball.size) 
-                {
-                    ball.color = this.color = randomRGB();
-                }
-            }
-        }
-    }
- 
 }
- 
-// our array of balls
-const balls = [];
 
-// while balls array is less then a number in our case 60
-while (balls.length < 60) 
+console.log("Problem 5:\n");
+Raise(eData.Employees[0]);
+Raise(eData.Employees[1]);
+Raise(eData.Employees[2]);
+Raise(eData.Employees[3]);
+console.log("*********************************************")
+// Problem 6
+let wfh = ["Anna", "Sam"];
+
+for(let i = 0; i < eData.Employees.length; i++)
 {
-    const size = random(10,20);
-    const ball = new Ball(
-       // ball position always drawn at least one ball width
-       // away from the edge of the canvas, to avoid drawing errors
-       random(0 + size,width - size),
-       random(0 + size,height - size),
-       random(-7,7),
-       random(-7,7),
-       randomRGB(),
-       size
-    );
- 
-   balls.push(ball);
-}
- 
-// our loop function
-function loop() 
-{
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-    ctx.fillRect(0, 0,  width, height);
- 
-    for (const ball of balls) 
+    // set a default value
+    eData.Employees[i].wfh = "False";
+
+    for(let j = 0; j < wfh.length; j++)
     {
-      ball.draw();
-      ball.update();
-      ball.collisionDetect();
+        if(eData.Employees[i].firstName === wfh[j])
+        {
+            eData.Employees[i].wfh = "True";
+            
+        }
     }
- 
-    requestAnimationFrame(loop);
 }
- 
-loop();
+
+console.log("Problem 6:\n");
+console.log("Employee 1 Update:");
+console.log(eData.Employees[0]);
+console.log("Employee 2 Update:");
+console.log(eData.Employees[1]);
+console.log("Employee 3 Update:");
+console.log(eData.Employees[2]);
+console.log("Employee 4 Update");
+console.log(eData.Employees[3]);
