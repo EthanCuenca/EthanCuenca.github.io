@@ -1,21 +1,23 @@
 body 
 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 50px;
-    background-color: #f2f2f2;
+    background-color: #333;
+    color: #fff;
 }
 
 h1, p, #enteredDigits, .digitButton, button 
 {
-    font-size: 20px;
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 h1 
 {
-    color: #4285f4;
+    font-size: 36px;
+    color: #9c27b0; /* Matching the digit button color */
 }
 
 #inputContainer 
@@ -23,51 +25,54 @@ h1
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #enteredDigits 
 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    color: #ccc;
 }
 
 .digitButton 
 {
-    width: 50px;
-    height: 50px;
-    margin: 8px;
-    font-size: 24px;
+    width: 70px;
+    height: 70px;
+    margin: 12px;
+    font-size: 32px;
+    line-height: 70px; /* Center the text vertically */
     cursor: pointer;
-    background-color: #ffffff;
-    border: 2px solid #4285f4;
-    transition: background-color 0.3s, border-color 0.3s;
+    background-color: #9c27b0; /* Purple color */
+    border: 2px solid #333;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    color: #fff;
 }
 
 .digitButton.clicked 
 {
-    background-color: #4285f4;
-    color: #ffffff;
-    border: 3px solid #ffffff;
+    background-color: #673ab7; /* Darker purple color */
+    color: #fff;
+    border: 3px solid #673ab7;
 }
 
 .digitButton:hover 
 {
-    background-color: #e0e0e0;
+    background-color: #7b1fa2; /* Lighter purple color on hover */
 }
 
 button 
 {
-    padding: 10px 20px;
-    margin: 5px;
+    padding: 15px 30px;
+    margin: 8px;
     cursor: pointer;
-    background-color: #4285f4;
-    color: #ffffff;
+    background-color: #34a853;
+    color: #fff;
     border: none;
-    font-size: 18px;
+    font-size: 24px;
     transition: background-color 0.3s;
 }
 
 button:hover 
 {
-    background-color: #3a73c1;
+    background-color: #2d8a3e;
 }
