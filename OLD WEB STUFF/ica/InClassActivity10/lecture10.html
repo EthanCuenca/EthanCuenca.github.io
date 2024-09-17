@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button, div
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: center;
+            border: 2px solid rgb(200 200 0 / 0.6);
+            background-color: rgb(0 217 217 / 0.6);
+            color: rgb(100 0 0 / 1);
+            box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+            height: 100px;
+            width: 150px;
+
+        }
+    </style>
+</head>
+<body>
+    <button type="button"> Player 1: </button>
+    <!-- <button id="press" type="button"> Press Me</button> -->
+    <div id="press"> Press me</div>
+
+    <!-- raw JS goes after the html so that everything can load first -->
+    <script>
+        //variables definded using 'const' or 'let'
+
+        // from the html doc look for something called button
+        const button = document.querySelector("button");
+        const press = document.getElementById("press");
+
+
+        // look for an event something the user is doing
+        // on this button look for a click and when clicked run the function called updateName
+        button.addEventListener('click', updateName);
+        press.addEventListener('click', updateName);
+
+        // creating the function called updateName
+        function updateName()
+        {
+            // let name = prompt("Enter a new name");
+            let name = 10;
+
+            // we can use this to debug
+            console,console.log("The function did run");
+            console.log(name);
+
+            // whatever the text in the button is chnage it to what is after the =
+            // button.textContent = `Player 1: ${name}`;
+
+            // whatever is in the html do soemthign with it
+            press.innerHTML = `<h1>Hello</h1>`
+        }
+
+    </script>
+
+    <!-- Linking things for JS is <script src="path" -->
+</body>
+</html>

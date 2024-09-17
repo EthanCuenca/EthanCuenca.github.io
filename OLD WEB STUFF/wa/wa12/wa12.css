@@ -1,0 +1,125 @@
+html
+{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #F8F8FF
+}
+
+.app
+{
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+header
+{
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(194, 166, 243);
+}
+
+.author-button
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(150, 249, 249); 
+    display: block;
+    color: black;
+    border-radius: 4px;
+    border: 1px black solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.text
+{
+    padding: 20px 50px;
+    min-height: 200px;
+}
+
+.explanation
+{
+    text-align: center;
+    line-height: 25px;
+    padding: 20px 20px;
+    min-height: 50px;
+}
+
+.quote-text
+{
+    padding-bottom: 30px;
+    font-size: 25px;
+    color: black;
+}
+
+.quote-author
+{
+    padding-bottom: 20px;
+    font-size: 20px;
+    color:thistle;
+}
+
+.controls
+{
+    width: 100%;
+    padding: 20px 50px;
+}
+
+.button
+{
+    display: block;
+    color: black;
+    border-radius: 4px;
+    border: 1px black solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.new-quote
+{
+    background-color:rgb(194, 166, 243);
+    margin-bottom: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.new-quote:hover
+{
+    background-color:mediumslateblue;
+    color:white;
+}
+
+.author-button:hover
+{
+    background-color:rgb(0, 208, 255);
+    color:white;
+}

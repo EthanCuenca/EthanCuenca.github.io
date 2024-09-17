@@ -1,0 +1,26 @@
+.box
+{
+    border: 2px dashed red;
+}
+
+/* defining classes and what each will do */
+/* padding pushes border away from the content */
+/* margins push elements away from each other */
+.text
+{
+    border: 2px dashed rgb(180, 38, 183);
+    padding: 20px 30px 10px 50px;
+    background-color: aqua;
+    margin: 10px 0px 0px 0px;
+}
+
+/* .text2
+{
+    border: 2px dashed blue;
+    padding: 20px 30px 10px 50px;
+} */
+
+/*  ems and rems em s based on font size rems is based on root element font size*/
+/* view width and height set view ports example is on bioler plate to set to device width*/
+/* percentages they use the space availible */
+/* relative mesurements let us handle different sizes for screens */
