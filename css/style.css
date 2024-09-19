@@ -22,6 +22,7 @@ body {
     padding: 10px 0;
     border-bottom: 2px solid #ff00ff;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .navbar a {
