@@ -1,0 +1,121 @@
+/* General styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #00ffcc;
+    background-image: url('path/to/your/background-image.jpg'); /* Add a gritty, urban background image */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    padding: 10px 0;
+    border-bottom: 2px solid #ff00ff;
+    text-align: center;
+}
+
+.navbar a {
+    color: #00ffcc;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ff00ff;
+    color: #0d0d0d;
+}
+
+.navbar span {
+    color: #00ffcc;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.flex-item {
+    flex: 1 1 calc(25% - 10px); /* Adjust the percentage to control the number of items per row */
+    box-sizing: border-box;
+}
+
+.flex-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+/* Paragraph styles */
+p {
+    text-align: center;
+    margin: 20px;
+    font-size: 1.2em;
+    color: #00ffcc;
+}
+
+/* Adding a neon glow effect */
+.neon {
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+}
+
+/* Glitch effect */
+.glitch {
+    position: relative;
+    color: #ff00ff;
+    font-size: 2em;
+    animation: glitch 1s infinite;
+}
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #00ffcc, -2px -2px #ff00ff;
+    }
+    40% {
+        text-shadow: -2px -2px #00ffcc, 2px 2px #ff00ff;
+    }
+    60% {
+        text-shadow: -2px -2px #00ffcc, 2px 2px #ff00ff;
+    }
+    100% {
+        text-shadow: 2px 2px #00ffcc, -2px -2px #ff00ff;
+    }
+}
+
+
