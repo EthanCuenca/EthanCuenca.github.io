@@ -11,6 +11,18 @@ body {
     color: #1E88E5; /* Blue text */
 }
 
+.float-image-infobox {
+    float: left; /* Floats the image to the left */
+    margin-right: 1em; /* Adds space between image and text */
+    max-width: 175px; /* Controls the size of the image */
+}
+
+.float-image {
+    float: left; /* Floats the image to the left */
+    margin-right: 1em; /* Adds space between image and text */
+    max-width: 250px; /* Controls the size of the image */
+}
+
 .wrapper {
     max-width: 100ch; /* 100 characters */
     margin: 0 auto; /* Center the wrapper */
