@@ -1,0 +1,91 @@
+/* Basic styling for layout */
+/* General styling for readability */
+/* use a general tritanopia  color pallet*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+
+    background-color: #f4f4f4; /* Light gray */
+    color: #1E88E5; /* Blue text */
+}
+
+.wrapper {
+    max-width: 100ch; /* 100 characters */
+    margin: 0 auto; /* Center the wrapper */
+    text-align: left; /* Align text left inside */
+}
+
+header, footer {
+    background-color: #D81B60; /* Deep Pink */
+    color: white;
+    padding: 1em;
+}
+
+h1, h2 {
+    font-family: serif;
+    font-style: italic;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+nav {
+    background-color: #444;
+    padding: 0.5em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    padding: 1em;
+}
+
+article {
+    flex: 3;
+    padding-right: 1em;
+}
+
+aside {
+    flex: 1;
+    background-color: #43A047; /* Green */
+    color: white; /* White text for better contrast*/ 
+    padding: 1em;
+    border-left: 1px solid #ccc;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
