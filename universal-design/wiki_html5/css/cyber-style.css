@@ -1,47 +1,79 @@
 /* Basic styling for layout */
 /* General styling for readability */
-/* use a general tritanopia  color pallet*/
+.skip-link {
+    background: black;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+}
+  
+.skip-link:focus {
+    transform: translateY(-100%);
+}
+  
+.skip-link {
+    /* Same as  before */
+    transition: transform 0.3s;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 
-    background-color: #f4f4f4; /* Light gray */
-    color: #1E88E5; /* Blue text */
+    background-color: #d6d6d6; /* Grey so that text is more visable */
+    /*color: #1E88E5;*/ /* Blue text */
+    color: #000000; /* Black text */
 }
 
-.float-image-infobox {
-    float: left; /* Floats the image to the left */
-    margin-right: 1em; /* Adds space between image and text */
-    max-width: 175px; /* Controls the size of the image */
+.float-image, .float-image-infobox {
+    float: left; /* Ensures text wraps around */
+    max-width: 250px; /* Limits the width */
+    height: auto; /* Keeps the aspect ratio */
+    margin-right: 1em; /* Adds space between text and image */
+    margin-bottom: 1em; /* Adds space below the image */
 }
 
-.float-image {
-    float: left; /* Floats the image to the left */
-    margin-right: 1em; /* Adds space between image and text */
-    max-width: 250px; /* Controls the size of the image */
+@media (max-width: 768px) {
+    .float-image, .float-image-infobox {
+        float: none;
+        display: block;
+        margin: 0 auto; /* Center images on small screens */
+    }
 }
 
 .wrapper {
-    max-width: 100ch; /* 100 characters */
+    max-width: 125ch; /* 100 characters */
     margin: 0 auto; /* Center the wrapper */
     text-align: left; /* Align text left inside */
 }
 
 header, footer {
-    background-color: #D81B60; /* Deep Pink */
+    background-color: #333333;  /* Darker background for a stronger contrast */
     color: white;
     padding: 1em;
 }
 
+/* Stronger color for headings */
 h1, h2 {
     font-family: serif;
     font-style: italic;
+    /* color: #1E88E5; */
+    color: #D81B60;
+}
+
+h3 {
+    font-family: serif;
+    /* color: #1E88E5; */
+    color: #D81B60;
 }
 
 p {
     font-family: sans-serif;
+    line-height: 1.8; /* More line spacing */
 }
 
 nav {
@@ -76,10 +108,12 @@ article {
 
 aside {
     flex: 1;
-    background-color: #43A047; /* Green */
+    background-color: #444444; /* Darker Grary */ 
     color: white; /* White text for better contrast*/ 
     padding: 1em;
     border-left: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
 }
 
 section {
@@ -88,7 +122,115 @@ section {
 
 footer {
     text-align: center;
+    color: #D81B60;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+th, td {
+    padding: 0.75em;
+    text-align: left;
+    border: 5px solid #ccc;
+    font-weight: bold;
+}
+
+th {
+    background-color: #444; /* Dark background for the header */
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternating row colors */
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em; /* Slightly larger font size */
+    margin-bottom: 0.5em; /* Space below the caption */
+    padding: 0.5em; /* Padding around the caption */
+    background-color: #D81B60; /* Use your accent color for visibility */
+    color: white; /* White text for contrast */
+    text-align: center; /* Center the text */
+    border-bottom: 2px solid #ccc; /* Distinct border below the caption */
+}
+
+
+
+/* tables so that I do not need to rely on color */
+td.yes {
+    background-color: #9EFF9E; /* Tritanopia-friendly green */
+    color: #000;
+    text-align: center;
+}
+
+td.no {
+    background-color: #FFE3E3; /* Light pink */
+    color: #000;
+    text-align: center;
+}
+
+#comments {
+    background-color: #f9f9f9;
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#comments {
+    background-color: #444444; /* Darker gray to match your theme */
+    padding: 1.5em;
+    border: 1px solid #ccc; /* Light border for definition */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    color: white; /* White text for better contrast */
+}
+
+#comments input[type="text"],
+#comments textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc; /* Consistent border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 1em; /* Space between inputs */
+    font-size: 16px; /* Larger text for readability */
+    background-color: #f9f9f9; /* Light background for inputs */
+    color: #000; /* Black text for input fields */
+}
+
+#comments input[type="submit"] {
+    background-color: #D81B60; /* Your accent color */
+    color: white; /* White text for contrast */
+    padding: 0.75em; /* Adds padding for a button-like feel */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#comments input[type="submit"]:hover {
+    background-color: #C2185B; /* Darker shade on hover */
+}
+
+#comments fieldset {
+    border: none; /* Remove the default border */
+}
+
+#comments legend {
+    font-size: 1.5em; /* Larger font for emphasis */
+    color: #D81B60; /* Accent color */
+    margin-bottom: 1em; /* Space below the legend */
+}
+
+#comments label {
+    display: block; /* Stack labels vertically */
+    margin-bottom: 0.5em; /* Space between label and input */
+}
+
 
 .sr-only {
     border: 0;
