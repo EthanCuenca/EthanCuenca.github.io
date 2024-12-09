@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Learn how to achieve universal design for websites to make them accessible to everyone, no matter their abilities.">
+    <title>How to Achieve Universal Design</title>
+    <link rel="stylesheet" href="/universal-design/final/css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to Content</a>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why.html">Why</a></li>
+                <li><a href="what.html">What</a></li>
+                <li><a href="how.html" class="active">How</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <article>
+            <section class="intro" id="how-to-achieve-universal-design">
+                <h1>How to Achieve Universal Design</h1>
+                <p>Creating a universally designed website involves several key practices. Here's how you can start:</p>
+            </section>
+        </article>
+
+        <section id="step-1">
+            <article>
+                <div class="wrapper">
+                    <h2>Step 1: Use Semantic HTML</h2>
+                    <p>Ensure that your HTML markup is semantically correct. This helps search engines, screen readers, and other technologies better understand the structure of your page.</p>
+                </div>
+            </article>
+        </section>
+        
+        <section id="step-2">
+            <article>
+                <div class="wrapper">
+                    <h2>Step 2: Make Your Site Keyboard Accessible</h2>
+                    <p>Ensure that all interactive elements (links, buttons, form fields) are accessible via keyboard navigation. Users should be able to tab through your site and interact with content using just the keyboard.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="step-3">
+            <article>
+                <div class="wrapper">
+                    <h2>Step 3: Provide Alt Text for Images</h2>
+                    <p>Always provide descriptive alternative text for your images, which helps visually impaired users understand the context of the image.</p>
+                </div>
+            </article>
+        </section>
+    
+        <section id="step-4">
+            <article>
+                <div class="wrapper">
+                    <h2>Step 4: Test for Accessibility</h2>
+                    <p>Use tools like Lighthouse, Axe, or WAVE to test your website’s accessibility. It's important to perform manual testing as well, especially with screen readers and assistive technologies.</p>
+                </div>
+            </article>
+        </section>
+
+        <aside id="comments">
+            <h2>Example: Accessible Form For Comments</h2>
+            <div class="wrapper">
+                <form id="myform" method="post" action="wiki.php">
+                    <fieldset>
+                        <legend>Leave a Comment</legend>
+    
+                        <label for="name">Name:
+                            <input type="text" id="name" name="name" required>
+                        </label>
+                        <label for="comment">Comment:
+                            <textarea id="comment" name="comment" required></textarea>
+                        </label>
+                        <input type="hidden" name="page" value="cyberpunk2077">
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Universal Web Design</p>
+    </footer>
+</body>
+</html>

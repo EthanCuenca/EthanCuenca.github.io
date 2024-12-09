@@ -1,0 +1,327 @@
+/* Basic styling for layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray for better readability */
+    color: #333; /* Dark gray text for better contrast */
+}
+
+/* Center content wrapper */
+.wrapper {
+    max-width: 125ch; /* 100 characters */
+    margin: 0 auto; /* Center the wrapper */
+    text-align: left;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #333333; /* Dark background for hero section */
+    color: white;
+    padding: 4em 2em; /* Add padding to create space around the content */
+    text-align: center; /* Center the text */
+}
+
+.hero h1 {
+    font-size: 3rem; /* Large heading */
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: 1em;
+}
+
+/* Optional: Background image for hero section */
+.hero {
+    background-image: url('path_to_your_image.jpg'); /* Add a background image if needed */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.hero h1, .hero p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text for better visibility */
+}
+
+/* Intro Section */
+.intro {
+    background-color: #bababa; /* Light blue background */
+    padding: 2em;
+    margin-bottom: 2em;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.intro h2 {
+    font-size: 2rem;
+    color: #D81B60; /* Dark gray for headings */
+    margin-bottom: 1em;
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333; /* Dark gray for text for better readability */
+}
+
+.intro ul {
+    padding-left: 1.5em;
+    list-style-type: disc;
+}
+
+.intro ul li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+
+/* Header and Footer */
+header, footer {
+    background-color: #333333;  /* Primary color for header/footer */
+    color: white;
+    padding: 1em;
+}
+
+footer {
+    text-align: center;
+    color: #e3f2fd; /* Light blue for footer text to tie it with accent color */
+}
+
+/* Stronger color for headings */
+h1, h2 {
+    font-family: serif;
+    font-style: italic;
+    color: #D81B60; /* Accent color for headings */
+}
+
+h3 {
+    font-family: serif;
+    color: #D81B60; /* Consistent accent color */
+}
+
+p {
+    font-family: sans-serif;
+    line-height: 1.8; /* More line spacing for readability */
+}
+
+/* Navigation */
+nav {
+    background-color: #444; /* Keep existing background */
+    padding: 0.5em;
+    display: flex;
+    justify-content: center; /* Center the navigation horizontally */
+    align-items: center; /* Align items vertically, if needed */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make the list horizontal */
+    gap: 1em; /* Add spacing between links */
+}
+
+nav ul li {
+    margin: 0; /* Remove any extra margin */
+}
+
+nav ul li a {
+    color: white; /* Keep existing link color */
+    text-decoration: none;
+    padding: 1em 0.5em; /* Add padding for clickable area */
+    border-radius: 5px; /* Keep hover style consistent */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #D81B60; /* Accent color on hover */
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+/* Style for the active page */
+nav ul li a.active {
+    background-color: #D81B60; /* Accent color */
+    color: white; /* Text color */
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: bold; /* Make the active link stand out */
+}
+
+/* Optional: Adding a hover effect */
+nav ul li a.active:hover {
+    background-color: #C2185B; /* Darker accent color on hover */
+}
+
+/* Skip Navigation */
+.skip-link {
+    background: black;
+    color: white;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+    /* z-index: 10; */
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    background-color: #D81B60; /* Accent color */
+    color: white;
+    padding: 10px;
+}
+
+/* Main Content Layout */
+main {
+    /* display: flex; */
+    padding: 1em;
+}
+
+article {
+    flex: 3;
+    padding-right: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+/* Aside Section */
+aside {
+    flex: 1;
+    background-color: #444444; /* Darker Gray */
+    color: white; /* White text for better contrast */
+    padding: 1em;
+    border-left: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    background-color: #D81B60;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Comments Section */
+#comments {
+    background-color: #444444; /* Darker gray to match your theme */
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white; /* White text for better contrast */
+}
+
+#comments input[type="text"],
+#comments textarea {
+    width: 100%;
+    padding: 1em; /* Increased padding for better touch target area */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    font-size: 1.1rem; /* Larger text for readability */
+    background-color: #fff;
+    color: #000;
+}
+
+#comments input[type="submit"] {
+    background-color: #D81B60; /* Your accent color */
+    color: white; /* White text for contrast */
+    padding: 0.75em; /* Adds padding for a button-like feel */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#comments input[type="submit"]:hover {
+    background-color: #C2185B;
+}
+
+#comments input[type="submit"]:focus {
+    outline: 2px solid #D81B60; /* Highlight focus with accent color */
+}
+
+#comments fieldset {
+    border: none;
+}
+
+#comments legend {
+    font-size: 1.5em;
+    color: #D81B60; /* Accent color for the legend */
+    margin-bottom: 1em;
+}
+
+#comments label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .hero {
+        padding: 3em 1em;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro {
+        padding: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.3em;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .intro {
+        padding: 1em;
+    }
+}
